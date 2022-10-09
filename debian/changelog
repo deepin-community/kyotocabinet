@@ -1,0 +1,103 @@
+kyotocabinet (1.2.79-1+u004) UNRELEASED; urgency=medium
+
+  * update
+
+ -- Boyuan Yang <byang@debian.org>  Sun, 24 Apr 2022 16:32:25 +0800
+
+kyotocabinet (1.2.79-1) unstable; urgency=medium
+
+  * New upstream release.
+  * debian/copyright: Refresh information.
+  * Refresh patches:
+    - test-disable-dir-db-test-fails-on-tmpfs-btrfs.patch:
+      Dropped, upstream has fixed the failing test.
+    - cpp-14.patch: Dropped, merged upstream.
+    - doc-kyotoproducts.pdf.patch: Update with new URL.
+
+ -- Boyuan Yang <byang@debian.org>  Sun, 15 Aug 2021 09:45:55 -0400
+
+kyotocabinet (1.2.76-5) unstable; urgency=medium
+
+  * Upload to unstable.
+  * Take over package maintenance through ITS process.
+    (Closes: #987174)
+
+ -- Boyuan Yang <byang@debian.org>  Sun, 15 Aug 2021 00:09:28 -0400
+
+kyotocabinet (1.2.76-5~exp2) experimental; urgency=medium
+
+  * debian/rules: Restore --link-doc option in dh_installdocs.
+    (Closes: #990227)
+  * debian/rules: Drop outdated override to dh_makeshlibs.
+  * debian/patches: Add patch to reenable debug symbol generation.
+
+ -- Boyuan Yang <byang@debian.org>  Tue, 20 Jul 2021 15:16:50 -0400
+
+kyotocabinet (1.2.76-5~exp1) experimental; urgency=medium
+
+  * Take over package maintenance through ITS process.
+    (See #987174)
+  * debian/control: Update Vcs-* fields to use Debian GitLab platform.
+  * debian/control:
+    + Bump Standards-Version to 4.5.1.
+    + Bump debhelper-compat to v13.
+    + Migrate to -dbgsym package.
+
+ -- Boyuan Yang <byang@debian.org>  Thu, 17 Jun 2021 11:02:01 -0400
+
+kyotocabinet (1.2.76-4.2) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Fix incompatibility with C++14/GCC 6 (Closes: #811627)
+
+ -- Andreas Stührk <andy@hammerhartes.de>  Sat, 24 Sep 2016 17:58:05 +0200
+
+kyotocabinet (1.2.76-4.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+
+  [ Steve Langasek ]
+  * Rename library packages for g++5 ABI transition.
+
+ -- Sebastian Ramacher <sramacher@debian.org>  Sat, 15 Aug 2015 12:16:02 +0200
+
+kyotocabinet (1.2.76-4) unstable; urgency=low
+
+  * use breaks/replaces for smooth upgrades following man page move
+      from -doc -> -utils
+  * do not unconditionally use -m64 when available (Closes: #680058)
+  * obey DEB_BUILD_OPTIONS=noopt of Policy 4.9.1
+  * disable -rpath linking per recommended practice
+  * provide convenience names (libkyotocabinet16-dev, libkyotocabinet-dbg)
+  * switch to xz (-2) compression for debs
+  * fix link to kyotoproducts.pdf to point to Internet
+  * GNU/kFreeBSD
+    - support kyotocabinet::getsysinfo() on GNU/kFreeBSD
+    - link with --as-needed on GNU/kFreeBSD as well as Linux
+  * include <unistd.h> in kccommon.h for gcc-4.7 compatibility
+
+ -- Shawn Landden <shawnlandden@gmail.com>  Wed, 11 Jul 2012 13:12:43 -0700
+
+kyotocabinet (1.2.76-3) unstable; urgency=low
+
+  * workaround for dh_installdoc leaving empty folder is not necessary
+      on buildds
+
+ -- Shawn Landden <shawnlandden@gmail.com>  Sun, 01 Jul 2012 18:50:23 -0700
+
+kyotocabinet (1.2.76-2) unstable; urgency=low
+
+  * include static library (libkyotocabinet.a) in -dev deb per §8.3
+  * consolidate and clean up docs
+    - fixed api/index.html link to work without a web server
+  * include examples in doc package
+  * improve test for atomics to remove special casing, could be prettier however
+    - fixes FTBFS on 32-bit powerpc
+
+ -- Shawn Landden <shawnlandden@gmail.com>  Sat, 30 Jun 2012 10:39:24 -0700
+
+kyotocabinet (1.2.76-1) unstable; urgency=low
+
+  * Initial release. (Closes: #613450)
+
+ -- Shawn Landden <shawnlandden@gmail.com>  Thu, 07 Jun 2012 16:12:07 -0700

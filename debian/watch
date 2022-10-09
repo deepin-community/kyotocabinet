@@ -1,0 +1,3 @@
+version=3
+
+https://dbmx.net/kyotocabinet/pkg/ kyotocabinet-(.+)\.(?:zip|tgz|tbz|txz|(?:tar\.(?:gz|bz2|xz|lzma)))

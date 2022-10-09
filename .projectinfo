@@ -1,0 +1,1 @@
+{"project":"kyotocabinet","type":"","version":"1.2.79","hierarchy":"base","priority":"","maintainer":"","packager":"","builddeps":" debhelper-compat (= 13), libtool (\u003e= 2.2), zlib1g-dev, liblzma-dev, liblzo2-dev, ","homepage":" https://dbmx.net/kyotocabinet/","git":"https://salsa.debian.org/janitor-team/proposed/kyotocabinet.git"}
