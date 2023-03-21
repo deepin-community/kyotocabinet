@@ -1,8 +1,12 @@
-kyotocabinet (1.2.79-1+u004) UNRELEASED; urgency=medium
+kyotocabinet (1.2.79-1deepin) unstable; urgency=medium
 
+  [ Boyuan Yang ]
   * update
 
- -- Boyuan Yang <byang@debian.org>  Sun, 24 Apr 2022 16:32:25 +0800
+  [ Yutao Meng ]
+  * Regulate version name
+
+ -- Yutao Meng <mengyutao@uniontech.com>  Tue, 21 Mar 2023 13:13:02 +0800
 
 kyotocabinet (1.2.79-1) unstable; urgency=medium
 
