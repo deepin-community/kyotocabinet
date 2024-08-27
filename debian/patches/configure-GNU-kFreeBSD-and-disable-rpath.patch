@@ -11,7 +11,7 @@ also, disable -rpath on Linux
  2 files changed, 4 insertions(+), 4 deletions(-)
 
 diff --git a/configure b/configure
-index a8f31bf..e5c0e10 100755
+index eaa4448..6439225 100755
 --- a/configure
 +++ b/configure
 @@ -4540,9 +4540,9 @@ then
@@ -27,7 +27,7 @@ index a8f31bf..e5c0e10 100755
  else
    MYCMDLIBS="$MYCMDLIBS $LIBS"
 diff --git a/configure.in b/configure.in
-index 741fefb..dea8d8e 100644
+index e049f56..34c9f1b 100644
 --- a/configure.in
 +++ b/configure.in
 @@ -291,9 +291,9 @@ then

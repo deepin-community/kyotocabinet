@@ -7,7 +7,7 @@
 #================================================================
 
 # Package name
-AC_INIT(kyotocabinet, 1.2.79)
+AC_INIT(kyotocabinet, 1.2.80)
 
 # Package information
 MYLIBVER=16
@@ -204,7 +204,7 @@ AC_C_BIGENDIAN(MYCPPFLAGS="$MYCPPFLAGS -D_MYBIGEND")
 
 # System-depending optimization
 printf 'checking for 64-bit availability... '
-if printf 'main() {}' | $CC -xc -m64 -o config.tmp - >config.tmp 2>&1
+if printf 'int main(void) {return 0;}' | $CC -xc -m64 -o config.tmp - >config.tmp 2>&1
 then
   MYCFLAGS="-m64 $MYCFLAGS"
   MYCXXFLAGS="-m64 $MYCXXFLAGS"
@@ -215,7 +215,7 @@ fi
 if test "$enable_opt" != "no"
 then
   printf 'checking for CPU optimization availability... '
-  if printf 'main() {}' | $CC -xc -march=native -o config.tmp - >config.tmp 2>&1
+  if printf 'int main(void) {return 0;}' | $CC -xc -march=native -o config.tmp - >config.tmp 2>&1
   then
     MYCFLAGS="-march=native $MYCFLAGS"
     MYCXXFLAGS="-march=native $MYCXXFLAGS"
@@ -225,7 +225,7 @@ then
   fi
 fi
 printf 'checking for useless warnings... '
-if printf 'main() {}' | $CC -xc \
+if printf 'int main(void) {return 0;}' | $CC -xc \
   -Wno-unused-but-set-variable -Wno-unused-but-set-parameter -o config.tmp - >config.tmp 2>&1
 then
   MYCFLAGS="$MYCFLAGS -Wno-unused-but-set-variable -Wno-unused-but-set-parameter"

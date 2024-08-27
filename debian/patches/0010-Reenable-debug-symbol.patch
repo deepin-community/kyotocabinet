@@ -7,7 +7,7 @@ Subject: Reenable debug symbol
  1 file changed, 2 insertions(+), 2 deletions(-)
 
 diff --git a/configure.in b/configure.in
-index dea8d8e..19cb7a6 100644
+index 34c9f1b..4a32912 100644
 --- a/configure.in
 +++ b/configure.in
 @@ -35,8 +35,8 @@ MYDOCUMENTFILES="COPYING FOSSEXCEPTION ChangeLog doc kyotocabinet.idl"
