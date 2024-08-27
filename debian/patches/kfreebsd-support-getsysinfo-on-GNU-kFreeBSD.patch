@@ -21,7 +21,7 @@ index 727aee4..eab78ef 100644
    struct ::rusage rbuf;
    std::memset(&rbuf, 0, sizeof(rbuf));
 diff --git a/myconf.h b/myconf.h
-index 7e93536..ede8119 100644
+index e8b9a6e..a99386d 100644
 --- a/myconf.h
 +++ b/myconf.h
 @@ -33,6 +33,11 @@

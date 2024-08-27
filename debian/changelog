@@ -1,12 +1,40 @@
-kyotocabinet (1.2.79-2deepin) unstable; urgency=medium
+kyotocabinet (1.2.80-2) unstable; urgency=medium
+
+  * QA upload.
+  * Orphan the package.
+
+ -- Boyuan Yang <byang@debian.org>  Fri, 08 Mar 2024 19:25:40 -0500
+
+kyotocabinet (1.2.80-1) unstable; urgency=medium
+
+  * Upload to unstable.
+
+ -- Boyuan Yang <byang@debian.org>  Mon, 12 Jun 2023 16:36:47 -0400
+
+kyotocabinet (1.2.80-1~exp1) experimental; urgency=medium
+
+  * New upstream release.
+    + No actual change; modification patched out in Debian already.
+  * debian/rules: Drop dh_strip override after migration.
+  * debian/patches: Refreshed.
+
+ -- Boyuan Yang <byang@debian.org>  Wed, 19 Apr 2023 08:47:49 -0400
+
+kyotocabinet (1.2.79-2) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Use secure copyright file specification URI.
+  * Remove constraints unnecessary since buster:
+    + Build-Depends: Drop versioned constraint on libtool.
+    + kyotocabinet-utils: Drop versioned constraint on kyotocabinet-doc in
+      Replaces.
+    + kyotocabinet-utils: Drop versioned constraint on kyotocabinet-doc in
+      Breaks.
 
   [ Boyuan Yang ]
-  * update
+  * debian/control: Mark kyotocabinet-doc as M-A: foreign.
 
-  [ Yutao Meng ]
-  * Regulate version name
-
- -- Yutao Meng <mengyutao@uniontech.com>  Tue, 21 Mar 2023 13:13:02 +0800
+ -- Boyuan Yang <byang@debian.org>  Sat, 08 Oct 2022 22:06:05 -0400
 
 kyotocabinet (1.2.79-1) unstable; urgency=medium
 
